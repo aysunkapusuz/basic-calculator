@@ -16,6 +16,8 @@ class Calculator {
     }
 
     appendNumber (number){
+        this.currentOperand = number
+
 
     }
 
