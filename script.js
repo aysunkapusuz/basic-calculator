@@ -2,10 +2,12 @@ class Calculator {
     constructor(preOperandTextElemet, currentOperandTextElemet){
         this.preOperandTextElemet = preOperandTextElemet
         this.currentOperandTextElemet = currentOperandTextElemet
+        this.clear()
     }
     clear (){
         this.currentOperand = ''
-        this.currentOperand = ''
+        this.preOperand = ''
+        this.operation = undefined
 
     }
 
@@ -26,6 +28,7 @@ class Calculator {
     }
 
     updateDisplay(){
+        this.currentOperandTextElemet.innerText = this.currentOperand
 
     }
 }
@@ -40,3 +43,12 @@ const equalButton = document.querySelector('[data-equals]')
 const preOperandTextElemet = document.querySelector('[data-pre-operand')
 const currentOperandTextElemet = document.querySelector('[data-current-operand')
 
+const calculator = new Calculator(preOperandTextElemet,
+    currentOperandTextElemet)
+
+    numberButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            calculator.appendNumber(button.innerText)
+            calculator.updateDisplay()
+        })
+    })
