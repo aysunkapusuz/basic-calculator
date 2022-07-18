@@ -53,6 +53,48 @@ button:hover{
     font-size: 3rem;
 }
 
+@media  screen and (max-width: 1048px) {
+   
+    .cal-grid{
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        min-height: 100vh;
+        grid-template-columns: repeat(4,80px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+        
+    }
+    button {
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1.5rem;
+        outline: none;
+        
+    }
+    .span-two{
+        grid-column: span 2;
+    }
+    .output{
+        border-radius: 20px;
+        grid-column: 1 / -1;
+        background-color: rgb(40, 39, 39);
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 8px;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .output .pre-operand{
+        font-size: 2rem;
+    }
+    .output .current-operand {
+        font-size: 3rem;
+    }
+    
+}
+
 
 
 @media  screen and (max-width: 736px) {
@@ -122,6 +164,55 @@ button:hover{
         min-height: 100vh;
         grid-template-columns: repeat(4,80px);
         grid-template-rows: minmax(120px, auto) repeat(5, 80px);
+        
+    }
+    button {
+        border-radius: 13px;
+        cursor: pointer;
+        font-size: 1rem;
+        outline: none;
+        
+    }
+    .span-two{
+        grid-column: span 2;
+    }
+    .output{
+        border-radius: 13px;
+        grid-column: 1 / -1;
+        background-color: rgb(40, 39, 39);
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 8px;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .output .pre-operand{
+        color: rgb(105, 104, 104);
+        font-size: 1.5rem;
+    }
+    .output .current-operand {
+        font-size: 2rem;
+    }
+    
+}
+@media  screen and (max-width: 290px) {
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .cal-grid{
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        min-height: 100vh;
+        grid-template-columns: repeat(4,60px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 60px);
         
     }
     button {
